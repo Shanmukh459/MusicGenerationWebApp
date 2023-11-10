@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+    text-align: center;
+    height: 100%;
+    color: #dedbd2;
+    font-family: 'Boogaloo', sans-serif;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    flex: 0 1 auto;
+    background: black;
+    text-align: center;
+    padding: 18px 0;
+}
+
+h1 {
+    margin: 0px;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: url("music3.jpg");
+    background-size:cover;
+    color: black;
+}
+
+.input-container {
+    background: #95c498;
+    padding: 20px 0px 20px 40px;
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(21, 97, 109, 0.4);
+    text-shadow: 0 0 10px #dedbd2;
+}
+input {
+    font-family: 'Boogaloo', sans-serif;
+ 
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    background: #ff7c90;
+    width: 200px;
+    border: none;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-family: 'Boogaloo', sans-serif;
+    text-shadow: 0 0 10px #dedbd2;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(21, 97, 109, 0.4);
+}
+
+button:hover {
+    background: #edafb8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#music-player {
+    color: #ff7c90;
+}

@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Generator</title>
+        <link rel="stylesheet" href="{% static '/MusicGenerationApp/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page-container">
+            <header>
+                <h1>Music Generation using Deep Learning</h1>
+            </header>
+            <main>
+                <div class="input-container">
+                    <label for="file-input">Enter your input:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="file" id="file-input">
+                </div>
+                <div class="btn-container">
+                    <button><a href="{% url 'predict' %}">Generate Using LSTM</a></button>
+                    <button>Generate Using Trandformers</button>
+                </div>  
+                <div>
+                    <midi-player id="music-player" src="{% static "/MusicGenerationApp/schu_143_1.mid" %}" >
+                    </midi-player>
+                    <midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
+                </div>    
+            </main>
+        </div>
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+</html>
